@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>yotuba777のホームページの404のHTML4のテスト</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            padding-top: 40px; /* ヘッダーの高さ分余白を確保 */
+        }
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: black;
+            padding: 1px;
+        }
+        .logo {
+            font-size: 24px;
+            color: white;
+            text-align: left;
+        }
+        .menu-button {
+            font-size: 24px;
+            cursor: pointer;
+            margin: 1px;
+            color: white;
+            float: right;
+        }
+        .menu {
+            position: absolute;
+            top: 50px;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background: black;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu ul li {
+            padding: 15px 0;
+            display: none;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .centre_ultrabig {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .centre_ultrabig h1 {
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="#" style="color: white; text-decoration: none;">yotuba777のホームページ</a>
+        </div>
+        <div class="menu-button" onclick="toggleMenu()">☰</div>
+    </div>
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">SNSのリンク</a></li>
+            <li><a href="#">ブログ</a></li>
+        </ul>
+    </div>
+    <div class="centre_ultrabig">
+        <h1>404</h1>
+        <h1>このURLに対応するファイルがありません。入力したURLが正しいか確認してください。</h1>
+    </div>
+    <script type="text/javascript">
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.right === '-250px') {
+                menu.style.right = '0';
+                var items = menu.getElementsByTagName('li');
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.display = 'block';
+                }
+            } else {
+                menu.style.right = '-250px';
+                var items = menu.getElementsByTagName('li');
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
